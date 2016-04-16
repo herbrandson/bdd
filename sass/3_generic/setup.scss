@@ -1,4 +1,9 @@
 
+html, body, div, input, select {
+	box-sizing: border-box;
+}
+
 html, body, #main {
 	height: 100%;
+	color: $font-color;
 }

@@ -28,24 +28,25 @@ gulp.task('watch', ['default'], () => {
 
 gulp.task('server', () => {
 	return gulp.src(DEST)
-		.pipe(webserver({
-			livereload: true
-		}));
+		.pipe(webserver({livereload: true}));
 });
 
 gulp.task('public', () => {
 	return gulp.src(PUBLIC)
+		.pipe(handleErrors('public'))
 		.pipe(gulp.dest(DEST));
 });
 
 gulp.task('vendor', () => {
 	return gulp.src(mainBowerFiles())
+		.pipe(handleErrors('vendor'))
 		.pipe(concat('vendor.js'))
 		.pipe(gulp.dest(DEST));
 });
 
 gulp.task('build', () => {
 	return gulp.src(SRC)
+		.pipe(handleErrors('build'))
 		.pipe(sourcemaps.init())
 		.pipe(babel())
 		.pipe(concat('app.js'))
@@ -55,6 +56,7 @@ gulp.task('build', () => {
 
 gulp.task('sass', () => {
 	return gulp.src(SASS)
+		.pipe(handleErrors('sass'))
 		.pipe(sourcemaps.init())
 		.pipe(concat('app.css'))
 		.pipe(sass().on('error', sass.logError))

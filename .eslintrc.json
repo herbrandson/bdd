@@ -37,6 +37,7 @@
         "react/prop-types":0
     },
     "globals": {
-        "ReactDOM": true
+        "ReactDOM": true,
+        "_": true
     }
 }
