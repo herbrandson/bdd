@@ -1,12 +1,34 @@
+$slider__height: .5rem;
 
 .slider {
-	height: .5rem;
+	height: $slider__height;
 	margin: .5rem;
 	background-color: $color-light;
+	overflow: hidden;
 }
 
-.slider__value {
-	width: 20%;
-	height: .5rem;
+.slider__bar {
+	pointer-events: none;
+	position: relative;
+	height: $slider__height;
 	background-color: $color-dark;
+}
+
+// volume
+.slider.-volume .slider__thumb {
+	display: none;
+}
+
+// pan
+.slider.-pan .slider__bar {
+	background-color: transparent;
+}
+
+.slider.-pan .slider__thumb {
+	pointer-events: none;
+	position: absolute;
+	width: .4rem;
+	height: $slider__height;
+	background-color: $color-dark;
+	right: -0.2rem;
 }
