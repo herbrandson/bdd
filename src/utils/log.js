@@ -1,4 +1,4 @@
 
 export default function log() {
-	console.log(...arguments); // eslint-disable-line
+	console.info(...arguments); // eslint-disable-line
 }

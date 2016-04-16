@@ -1,9 +1,10 @@
 
 .channel {
+	background: linear-gradient(to bottom, $color-light 0%, $color-white 80%, $color-white 100%);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem .5rem;
+	padding: .5rem;
 }
 
 .channel__name {
@@ -11,3 +12,6 @@
 	margin: 0 1rem;
 }
 
+.channel__controls {
+	width: 5rem;
+}

@@ -1,10 +1,15 @@
 
-$color-lightest: #ccc;
+$color-white: #fff;
+$color-lightest: #dadada;
 $color-light: #999;
-$color-medium: #777;
+$color-medium: #6a6a6a;
 $color-dark: #555;
-$color-darkest: #333;
+$color-darkest: #4b4b4b;
 
-$font-color: $color-medium;
+$color-accent: #89be29;
+$color-accent2: #b7b053; // TODO: need better names here
+
+$color-font: $color-medium;
+$color-disabled: $color-light;
 
 $animation-length: .25s;

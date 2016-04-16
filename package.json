@@ -11,6 +11,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
+    "gulp-connect": "^3.2.2",
     "gulp-eslint": "^2.0.0",
     "gulp-jscs": "^3.0.2",
     "gulp-notify": "^2.2.0",
