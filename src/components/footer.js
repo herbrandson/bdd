@@ -1,9 +1,10 @@
+import Button from '../controls/button';
+import PlayIcon from '../icons/play';
+import RecordIcon from '../icons/record';
 
 export default () => (
 	<div className='footer'>
-		<button className='button'>a</button>
-		<button className='button -active'>b</button>
-		<button className='button -disabled'>c</button>
-		<button className='button'>x</button>
+		<Button><PlayIcon /></Button>
+		<Button><RecordIcon /></Button>
 	</div>
 );

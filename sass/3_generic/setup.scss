@@ -7,3 +7,8 @@ html, body, #main {
 	height: 100%;
 	color: $color-font;
 }
+
+html {
+	font-family: $font;
+	font-weight: 300;
+}

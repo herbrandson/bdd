@@ -1,0 +1,30 @@
+
+.icon {
+	fill: $color-white;
+	width: 10px;
+	height: 10px;
+	display: block; // TODO: temp hack
+}
+
+.icon__handel {
+	fill: $color-dark;
+	width: 10px;
+	height: 10px;
+	display: block; // TODO: temp hack
+}
+
+.icon__logo {
+	fill: none;
+	stroke: $color-dark;
+	stroke-width: 7;
+	display: block; // TODO: temp hack
+}
+
+.icon__settings {
+	width: 10px;
+	height: 10px;
+	fill: none;
+	stroke: $color-white;
+	stroke-width: 20;
+	display: block; // TODO: temp hack
+}
