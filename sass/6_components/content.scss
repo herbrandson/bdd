@@ -2,3 +2,26 @@
 .content {
 	flex: 1;
 }
+
+.content__drum {
+	fill: none;
+	stroke: $color-light;
+	stroke-width: 2;
+	// filter: drop-shadow( -5px -5px 5px #000 )
+}
+
+.content__trigger {
+	animation-name: content__triggers-animation;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes content__triggers-animation {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

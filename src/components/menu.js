@@ -1,9 +1,9 @@
 import Channel from './channel';
 import channelRepository from '../repositories/channel-repository';
 
-export default () => (
+export const render = (channels) => (
 	<div className='menu'>
-		{channelRepository.get().map(x => (
+		{channels.map(x => (
 			<Channel key={x.id} channel={x}/>
 		))}
 
@@ -12,3 +12,5 @@ export default () => (
 		</div>
 	</div>
 );
+
+export default () => render(channelRepository.get());
