@@ -9,10 +9,13 @@ function random(min, max) {
 }
 
 setInterval(() => {
+	const r = random(0, 1);
+	const theta = random(0, 360);
+
 	DATA.push({
 		id: id++,
-		x: random(-1, 1),
-		y: random(-1, 1),
+		x: r * Math.cos(theta),
+		y: r * Math.sin(theta),
 		force: random(0.1, 1),
 		offset: random(-1, 1),
 	});
@@ -22,7 +25,7 @@ setInterval(() => {
 	}
 
 	messageBus.trigger('stateChanged');
-}, 500);
+}, 100);
 
 export default {
 	get() {
