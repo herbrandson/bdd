@@ -25,7 +25,7 @@ setInterval(() => {
 	}
 
 	messageBus.trigger('stateChanged');
-}, 100);
+}, 500);
 
 export default {
 	get() {

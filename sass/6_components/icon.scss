@@ -1,16 +1,18 @@
 
-.icon {
-	fill: $color-white;
+%icon {
 	width: 10px;
 	height: 10px;
 	display: block; // TODO: temp hack
 }
 
+.icon {
+	@extend %icon;
+	fill: $color-white;
+}
+
 .icon__handel {
+	@extend %icon;
 	fill: $color-dark;
-	width: 10px;
-	height: 10px;
-	display: block; // TODO: temp hack
 }
 
 .icon__logo {
@@ -21,10 +23,14 @@
 }
 
 .icon__settings {
-	width: 10px;
-	height: 10px;
+	@extend %icon;
 	fill: none;
 	stroke: $color-white;
 	stroke-width: 20;
-	display: block; // TODO: temp hack
+}
+
+.icon__close {
+	@extend %icon;
+	stroke: $color-white;
+	stroke-width: 20;
 }

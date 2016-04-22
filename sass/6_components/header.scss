@@ -4,7 +4,8 @@
 }
 
 .header__inner {
-	background: linear-gradient(to bottom, $color-light 0%, $color-white 80%, $color-white 100%);
+	@include gradient;
+
 	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.75);
 	border-top: 1px solid $color-white;
 	margin-top: 1rem;

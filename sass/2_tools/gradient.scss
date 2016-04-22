@@ -1,0 +1,4 @@
+
+@mixin gradient() {
+	background: linear-gradient(to bottom, $color-light 0%, $color-white 80%, $color-white 100%);
+}

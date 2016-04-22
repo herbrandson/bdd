@@ -1,0 +1,80 @@
+
+.modal__background {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	animation-name: modal__background;
+	animation-duration: $animation-length;
+
+	&.-closing {
+		transition: all $animation-length;
+		opacity: 0;
+	}
+}
+
+@keyframes modal__background {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.modal__window {
+	min-width: 300px;
+	min-height: 150px;
+
+	@include shadow;
+
+	background: $color-white;
+
+	animation-name: modal__window;
+	animation-duration: $animation-length;
+}
+
+.modal__background.-closing .modal__window {
+	transition: all $animation-length;
+	transform: scale(0, 0);
+}
+
+@keyframes modal__window {
+	0% {
+		transform: scale(0, 0);
+	}
+
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
+.modal__header {
+	@include gradient;
+	@include shadow;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modal__header-text {
+	padding-left: .5rem;
+}
+
+.modal__close-button {
+	float: right;
+	margin: 0;
+	padding: .5rem;
+}
+
+.modal__content {
+	padding: 1rem;
+}

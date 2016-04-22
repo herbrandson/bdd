@@ -1,7 +1,8 @@
-import Header from './header';
-import Menu from './menu';
 import Content from './content';
 import Footer from './footer';
+import Header from './header';
+import Menu from './menu';
+import Modal from './modal';
 
 export default () => (
 	<div className='shell'>
@@ -11,5 +12,6 @@ export default () => (
 			<Content />
 		</div>
 		<Footer />
+		<Modal />
 	</div>
 );
